@@ -1,0 +1,40 @@
+"porofont.lib" operation manual
+
+フォント番号の指定
+void	font_select(int font_no)
+	font_no			フォント番号（０～１５）
+	リターン値		なし
+
+	font_read,out_textを発行する前に必ず設定する事。
+
+フォントファイルの読み込み
+int	font_read(char *font_file_name,char *environment_name)
+	font_file_name		読み込むフォント名
+	environment_name	フォントのあるディレクトリが明記してある
+				環境変数の名前（省略化）
+	リターン値		０＝読み込み正常
+				１＝読み込み異常
+
+グラフィックマスクの設定
+void	mask_set(char red_mask,char green_mask,char blue_mask,int rev_mode);
+	red_mask		赤のプレーンに取るＡＮＤ値
+	green_mask		緑のプレーンに取るＡＮＤ値
+	blue_mask		青のプレーンに取るＡＮＤ値
+	rev_mode		０＝ノーマル表示
+				１＝リバース表示
+	リターン値		なし
+
+フォントの表示
+void	out_text(int x,int y,char *string)
+	x			Ｘ表示開始位置	（０～３９）
+	y			Ｙ表示位置	（０～２４）
+	string			表示文字	（半角で指定）
+	リターン値		なし
+
+フォント使用終了
+void	font_unread(void)
+
+fonttest.cも参照してみてください。
+
+	pcs32378	こもも
+

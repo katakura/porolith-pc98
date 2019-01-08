@@ -1,0 +1,25 @@
+[47mA:\USR\SRC\POROLITH.C[46m             [    1:   1]      <‘}“ü>          HELP‚Åƒwƒ‹ƒv[m
+        for (;;) {
+                c = getch() ;
+                if (c == 'y') return(1) ;
+                if (c == 'n') return(0) ;
+        }
+}
+void
+poro_init(void)
+{
+        int     x,y,i ;
+
+        srand(time(0L)) ;                       /* ×İÀŞÑŠÖ”‚Ì‰Šú‰»    */
+        map_offset = MAP_XX ;                   /* ·¬×¸À‚Ì•\¦ˆÊ’uİ’è  */
+
+        for (i=0;i<5;i++) score_reaso[47mn[m[i][0] = 0x00 ;   /* ½º±msg‰Šú‰» */
+        score = 0 ;
+        speed = SG_SPEED ;                      /* ½Ëß°ÄŞ‚Ì‰Šúİ’è     */
+        next_block = rand()%SG_BLOCK_NUM ;
+
+        for (y=0;y<MAP_Y;y++) {                 /* ‰æ–ÊÃŞ°À‚Ì‰Šúİ’è   */
+                for (x=0;x<MAP_X;x++) {
+                        screen_map[y][x] = 0x00 ;
+                }
+    [47m MENU1[m [47m MENU2[m [47m MENU3[m [47m SPLIT[m [47m FIND [m    [47m SEL  [m [47m CUT  [m [47m COPY [m [47m PASTE[m [47m TAGJP[m

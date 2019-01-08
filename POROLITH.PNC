@@ -1,0 +1,25 @@
+sun@s3105%42 rusers
+s3105   guest
+^C
+sun@s3105%43 cd /usr/games
+sun@s3105%44 ls
+adventure     boggletool    factor        mille         snscore
+arithmetic    btlgammon     fish          monop         teachgammon
+backgammon    canfield      fortune       moo           trek
+banner        canfieldtool  gammonscore   number        worm
+battlestar    cfscores      gammontool    primes        worms
+bcd           chess         hack          quiz          wump
+bj            chesstool     hangman       rain          porolith
+bogdict       ching         hunt          random
+boggle        craps         lib           robots
+boggledict    cribbage      life          snake
+sun@s3105%45 hack
+
+Are you an experienced player? [ny] n
+
+I'll choose a character for you.
+This game you will be a Speleologist.
+
+Hit space to continue: 
+
+
