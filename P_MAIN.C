@@ -386,6 +386,7 @@ porolith(void)
 					getch();
 					break;
 				case scan_5:
+				case scan_K:
 					block_ring_left();
 					if (1 == block_check(block_x, block_y)) {
 						block_ring_right();
@@ -398,6 +399,7 @@ porolith(void)
 #endif
 					break;
 				case scan_4:
+				case scan_J:
 					block_x--;
 					if (1 == block_check(block_x, block_y)) {
 						block_x++;
@@ -409,6 +411,7 @@ porolith(void)
 					}
 					break;
 				case scan_6:
+				case scan_L:
 					block_x++;
 					if (1 == block_check(block_x, block_y)) {
 						block_x--;
@@ -420,6 +423,7 @@ porolith(void)
 					}
 					break;
 				case scan_0:
+				case scan_N:
 					block_y++;
 					if (1 == block_check(block_x, block_y))
 						block_y--;
@@ -519,6 +523,10 @@ rank_sort(void)
 			strcpy(high_score[i].name, nam);
 			lotim = time(NULL);
 			timpt = localtime(&lotim);
+			/* fix for Y2K */
+			if (timpt->tm_year >= 100) {
+				timpt->tm_year -= 100;
+			}
 			sprintf(dat, "%02d/%02d/%02d", timpt->tm_year, timpt->tm_mon + 1, timpt->tm_mday);
 			strcpy(high_score[i].date, dat);
 			sprintf(dat, "%02d:%02d:%02d", timpt->tm_hour, timpt->tm_min, timpt->tm_sec);
@@ -692,4 +700,3 @@ porolith_abort(void)
 	color(TEX_WHITE);
 	exit(-1);
 }
-

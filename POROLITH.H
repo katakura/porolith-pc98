@@ -78,6 +78,10 @@
 #define		scan_6		0x48
 #define		scan_8		0x43
 #define		scan_Q		0x10
+#define		scan_J		0x23
+#define		scan_K		0x24
+#define		scan_L		0x25
+#define		scan_N		0x2e
 #endif
 
 /*	ハイスコアの管理用型定義
